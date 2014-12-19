@@ -33,7 +33,7 @@ public class NeverLag extends JavaPlugin {
 				player.sendMessage("Run /nl to clear lag. The plugin, ClearLagg (http://goo.gl/E18aH) is required for NeverLag to work. This plugin was made by myHub MC Developers.");
 			}
 			else {
-			player.sendMessage ("Unrecognized command! Type /nl help for help or /nl to clear the lag.");
+			player.sendMessage ("Unrecognized command. Type /nl help for help or /nl to clear the lag.");
 			}
 			}
 		return false;
