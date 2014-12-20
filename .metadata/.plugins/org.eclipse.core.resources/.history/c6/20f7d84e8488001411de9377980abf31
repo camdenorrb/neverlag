@@ -28,7 +28,7 @@ public class NeverLag extends JavaPlugin {
 				player.performCommand("lag");
 				player.sendMessage(ChatColor.GREEN + "Run /nl to clear lag. The plugin, ClearLagg http://goo.gl/E18aH is required for NeverLag to work. This plugin was made by myHub MC Developers.");
 				Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "Lag cleared.");
-				}
+			}
 				}
 			
 			if(args[0].equals("help")) {
