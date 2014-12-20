@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class NeverLag extends JavaPlugin {
 	
 	public void onEnable() {
-		
+		System.out.println(“THIS IS AN EDIT HI”);
 	}
 	
 	public void onDisable() {
