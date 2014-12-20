@@ -1,0 +1,10 @@
+name: NeverLag
+version: 0.1
+main: com.myhublive.mc.NeverLag.NeverLag
+description: Clears the lag in the server. Relies on ClearLagg.
+commands:
+   nl:
+     description: Clears the lag on the server.
+     aliases: [neverlag]
+     permission: nl.lag
+     usage: Type /nl to Clear the Lag or /nl help for help. Make sure ClearLagg is installed!
