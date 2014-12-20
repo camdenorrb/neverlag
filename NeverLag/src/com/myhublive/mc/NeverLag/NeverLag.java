@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class NeverLag extends JavaPlugin {
 	
 	public void onEnable() {
-		System.out.println(“THIS IS AN EDIT HI”);
+		
 	}
 	
 	public void onDisable() {
@@ -20,25 +20,20 @@ public class NeverLag extends JavaPlugin {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		Player player = (Player) sender;
 		if(label.equalsIgnoreCase("nl")){
-			if(player.hasPermission("nl.lag")) {
 			if(args.length == 0){
-				player.performCommand("lagg gc"); 
-				player.performCommand("lagg unloadchunks");
-				player.performCommand("lagg clear");
-				player.performCommand("lag");
-				player.sendMessage(ChatColor.GREEN + "Run /nl to clear lag. The plugin, ClearLagg http://goo.gl/E18aH is required for NeverLag to work. This plugin was made by myHub MC Developers.");
-				Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "Lag cleared.");
+				if(player.hasPermission("nl.lag")) {
+					Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "lagg gc"); 
+					Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "lagg clear"); 
+					Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "lagg unloadchunks"); 
+					Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "lagg"); 
 				}
-				}
-			
-			if(args[0].equals("help")) {
-				player.sendMessage(ChatColor.GREEN + "Run /nl to clear lag. The plugin, ClearLagg http://goo.gl/E18aH is required for NeverLag to work. This plugin was made by myHub MC Developers.");
 			}
-			else {
+			else if(args[0].equals("help")) {
+				player.sendMessage(ChatColor.GREEN + "Run /nl to clear lag. The plugin, ClearLagg http://goo.gl/E18aH is required for NeverLag to work. This plugin was made by myHub MC Developers.");
+			} else {
 			player.sendMessage ("Unrecognized command! Type /nl help for help or /nl to clear the lag.");
 			}
-			}
-		return false;
+		}
+	return false; 
 	}
-
 }
