@@ -1,0 +1,9 @@
+name: NeverLag
+main: com.gitlab.boraware.neverlag.neverlag
+version: 2.0
+commands:
+   nl:
+      description: This is the main NeverLag command.
+      usage: /nl
+      permission: nl.lag
+      permission-message: You do not have nl.lag.
