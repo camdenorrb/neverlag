@@ -1,0 +1,32 @@
+group 'me.camdenorrb'
+version '1.0.0'
+
+buildscript {
+
+    ext {
+	    shadowVersion = '2.0.1'
+	    spigotVersion = '1.12-R0.1-SNAPSHOT'
+    }
+
+    repositories { jcenter() }
+
+    dependencies {
+        classpath "com.github.jengelman.gradle.plugins:shadow:$shadowVersion"
+    }
+
+}
+
+
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+
+sourceCompatibility = 1.8
+
+
+repositories { mavenLocal() }
+
+dependencies {
+	compileOnly "org.spigotmc:spigot:$spigotVersion"
+}

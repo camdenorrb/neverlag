@@ -1,9 +1,13 @@
 name: NeverLag
-main: com.gitlab.boraware.neverlag.neverlag
-version: 2.0
+version: Kat1.0
+authors: [MrKitty_Cat, borao]
+main: me.camdenorrb.neverlag.NeverLag
+
+depend: [ClearLag]
+
 commands:
-   nl:
-      description: This is the main NeverLag command.
-      usage: /nl
-      permission: nl.lag
-      permission-message: You do not have nl.lag.
+
+  nl:
+    usage: "/nl"
+    permission: "nl.lag"
+    permission-message: "You don't have <permission>"
